@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5adbc538_1adb6c1c",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2016-11-11T21:42:15Z",
+      "side": 1,
+      "message": "setup.py build_sphinx\nbut can be followup since we have not updated https://github.com/openstack-packages/openstack-example-spec\nand also it should be a macro in rpm-packaging/openstack-macros",
+      "revId": "f41f414a1ea90ff486638fd8cb054e4c604b37a2",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5adbc538_3ad8281d",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2016-11-11T21:42:15Z",
+      "side": 1,
+      "message": "no changelogs in rpm-master according to the current RDO guidelines:\nhttps://www.rdoproject.org/documentation/rdo-packaging/#branches-in-distgits\n\nbut since DLRN is now dropping changelog, maybe this initial one can stay as a record who created it?",
+      "revId": "f41f414a1ea90ff486638fd8cb054e4c604b37a2",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
