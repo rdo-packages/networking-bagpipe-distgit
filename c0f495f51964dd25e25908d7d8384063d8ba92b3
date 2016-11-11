@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5adbc538_3fdd7a15",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2016-11-11T10:05:56Z",
+      "side": 1,
+      "message": "This package has an epoch, so the version should be 2:3.9.0",
+      "range": {
+        "startLine": 42,
+        "startChar": 36,
+        "endLine": 42,
+        "endChar": 41
+      },
+      "revId": "c0f495f51964dd25e25908d7d8384063d8ba92b3",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5adbc538_bfd0aaf8",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2016-11-11T10:05:56Z",
+      "side": 1,
+      "message": "Please add %license LICENSE to the -doc subpackage. The Fedora guidelines require every package combination to include a license.",
+      "range": {
+        "startLine": 81,
+        "startChar": 0,
+        "endLine": 83,
+        "endChar": 9
+      },
+      "revId": "c0f495f51964dd25e25908d7d8384063d8ba92b3",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5adbc538_dfcd765f",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2016-11-11T10:05:56Z",
+      "side": 1,
+      "message": "nit: for DLRN, we don\u0027t have any lines in the changelog, just the %changelog tag.",
+      "range": {
+        "startLine": 86,
+        "startChar": 0,
+        "endLine": 87,
+        "endChar": 18
+      },
+      "revId": "c0f495f51964dd25e25908d7d8384063d8ba92b3",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
