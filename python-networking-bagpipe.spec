@@ -64,7 +64,7 @@ rm -rf %{pypi_name}.egg-info
 %build
 %py2_build
 # generate html docs
-sphinx-build doc/source html
+#%{__python2} setup.py build_sphinx
 # remove the sphinx-build leftovers
 rm -rf html/.{doctrees,buildinfo}
 
@@ -74,15 +74,16 @@ rm -rf html/.{doctrees,buildinfo}
 
 %files -n python2-%{pypi_name}
 %license LICENSE
-%doc README.rst doc/source/readme.rst
+%doc README.rst
 %{python2_sitelib}/%{sname}
 %{python2_sitelib}/%{sname}-*.egg-info
 %{_bindir}/neutron-bagpipe-linuxbridge-agent
 
 %files -n python-%{pypi_name}-doc
-%doc html
+#%doc html
 %license LICENSE
 
 %changelog
 * Fri Nov 11 2016 Luke Hinds <lhinds@redhat.com> - 4.0.0-2
 - Initial package.
+# REMOVEME: error caused by commit https://github.com/openstack/networking-bagpipe/commit/290a56978f88fb05d8c3de70b88d7942f7a5309b
