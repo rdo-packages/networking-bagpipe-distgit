@@ -86,3 +86,4 @@ rm -rf html/.{doctrees,buildinfo}
 %changelog
 * Fri Nov 11 2016 Luke Hinds <lhinds@redhat.com> - 4.0.0-2
 - Initial package.
+# REMOVEME: error caused by commit https://github.com/openstack/networking-bagpipe/commit/290a56978f88fb05d8c3de70b88d7942f7a5309b
