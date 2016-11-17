@@ -64,7 +64,7 @@ rm -rf %{pypi_name}.egg-info
 %build
 %py2_build
 # generate html docs
-sphinx-build doc/source html
+#%{__python2} setup.py build_sphinx
 # remove the sphinx-build leftovers
 rm -rf html/.{doctrees,buildinfo}
 
@@ -74,13 +74,13 @@ rm -rf html/.{doctrees,buildinfo}
 
 %files -n python2-%{pypi_name}
 %license LICENSE
-%doc README.rst doc/source/readme.rst
+%doc README.rst
 %{python2_sitelib}/%{sname}
 %{python2_sitelib}/%{sname}-*.egg-info
 %{_bindir}/neutron-bagpipe-linuxbridge-agent
 
 %files -n python-%{pypi_name}-doc
-%doc html
+#%doc html
 %license LICENSE
 
 %changelog
