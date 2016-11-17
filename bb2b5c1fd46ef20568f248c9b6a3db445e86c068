@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5adbc538_34e75842",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2016-11-17T22:10:46Z",
+      "side": 1,
+      "message": "This upstream change brought new build-time dep:\nhttps://github.com/openstack/networking-bagpipe/commit/290a56978f88fb05d8c3de70b88d7942f7a5309b#diff-b4ef698db8ca845e5845c4618278f29a",
+      "revId": "bb2b5c1fd46ef20568f248c9b6a3db445e86c068",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5adbc538_54e4e43a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2016-11-17T22:10:46Z",
+      "side": 1,
+      "message": "...which you can see by digging into logs there:\nhttps://trunk.rdoproject.org/centos7/29/0a/290a56978f88fb05d8c3de70b88d7942f7a5309b_f41f414a/rpmbuild.log\n\nDEBUG: Running Sphinx v1.2.3\nDEBUG: Extension error:\nDEBUG: Could not import extension sphinxcontrib.blockdiag (exception: No module named sphinxcontrib.blockdiag)",
+      "revId": "bb2b5c1fd46ef20568f248c9b6a3db445e86c068",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
