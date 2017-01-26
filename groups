@@ -1,5 +1,5 @@
-# UUID          Group Name
-False 	Non-Interactive Users
-43013d8881defd3beea72d3069d4e83251392329       	openstack/networking-bagpipe-distgit-core
-bfc3bd1dcef86e56b69f5080c23c67e9504ee4f6        	openstack/networking-bagpipe-distgit-ptl
-global:Registered-Users		Registered Users
+# UUID                                  	Group Name
+#
+43013d8881defd3beea72d3069d4e83251392329	openstack/networking-bagpipe-distgit-core
+bfc3bd1dcef86e56b69f5080c23c67e9504ee4f6	openstack/networking-bagpipe-distgit-ptl
+global:Registered-Users                 	Registered Users
