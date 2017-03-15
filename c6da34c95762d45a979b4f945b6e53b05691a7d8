@@ -33,6 +33,57 @@
       "revId": "c6da34c95762d45a979b4f945b6e53b05691a7d8",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa98f980_75466225",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2017-03-15T16:55:21Z",
+      "side": 1,
+      "message": "rpmlint doesn\u0027t like the macro in the comments. Do these comments need to be here?",
+      "revId": "c6da34c95762d45a979b4f945b6e53b05691a7d8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa98f980_55415e0a",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2017-03-15T16:55:21Z",
+      "side": 1,
+      "message": "rpmlint doesn\u0027t like this comment (macro in comment). Does this line need to be here?",
+      "revId": "c6da34c95762d45a979b4f945b6e53b05691a7d8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa98f980_353cda93",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2017-03-15T16:55:21Z",
+      "side": 1,
+      "message": "s/March/Mar/ for rpmlint passing",
+      "revId": "c6da34c95762d45a979b4f945b6e53b05691a7d8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
