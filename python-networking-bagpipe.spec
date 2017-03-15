@@ -1,5 +1,6 @@
 %global pypi_name networking-bagpipe
 %global sname networking_bagpipe
+%global servicename bagpipe-bgp
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:           python-%{pypi_name}
@@ -71,7 +72,24 @@ rm -rf html/.{doctrees,buildinfo}
 
 %install
 %py2_install
+cp %{buildroot}/%{_bindir}/neutron-bagpipe-linuxbridge-agent %{buildroot}/%{_bindir}/neutron-bagpipe-linuxbridge-agent-2
+ln -sf %{_bindir}/neutron-bagpipe-linuxbridge-agent-2 %{buildroot}/%{_bindir}/neutron-bagpipe-linuxbridge-agent-%{python2_version}
 
+%package -n openstack-%{servicename}
+Summary:    Networking-BGP
+
+%description -n openstack-%{servicename}
+Networking-BGP
+
+
+%post -n openstack-%{servicename}
+%systemd_post %{servicename}.service
+
+%preun -n openstack-%{servicename}
+%systemd_preun %{servicename}.service
+
+%postun -n openstack-%{servicename}
+%systemd_postun_with_restart %{servicename}.service
 
 %files -n python2-%{pypi_name}
 %license LICENSE
@@ -79,11 +97,23 @@ rm -rf html/.{doctrees,buildinfo}
 %{python2_sitelib}/%{sname}
 %{python2_sitelib}/%{sname}-*.egg-info
 %{_bindir}/neutron-bagpipe-linuxbridge-agent
+%{_bindir}/neutron-bagpipe-linuxbridge-agent-2
+%{_bindir}/neutron-bagpipe-linuxbridge-agent-%{python2_version}
+%{_bindir}/bagpipe-bgp
+%{_bindir}/bagpipe-bgp-cleanup
+%{_bindir}/bagpipe-fakerr
+%{_bindir}/bagpipe-impex2dot
+%{_bindir}/bagpipe-looking-glass
+%{_bindir}/bagpipe-rest-attach
+%config(noreplace) %attr(0640, root, neutron) %{_sysconfdir}/bagpipe-bgp/*.conf
+%config(noreplace) %attr(0640, root, neutron) %{_sysconfdir}/bagpipe-bgp/rootwrap.d/*.filters
+%config(noreplace) %attr(0640, root, neutron) %{_sysconfdir}/bagpipe-bgp/*.template
 
 %files -n python-%{pypi_name}-doc
 #%doc html
 %license LICENSE
 
 %changelog
-* Fri Nov 11 2016 Luke Hinds <lhinds@redhat.com> - 4.0.0-2
+* Wed March 15 2017 Luke Hinds <lhinds@redhat.com> - 6.0.0
 - Initial package.
+- Added new file directives from bagpipe-bgp merge into networking-bagpipe
