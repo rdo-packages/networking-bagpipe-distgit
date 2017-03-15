@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa98f980_55a5de02",
+        "filename": "networking-bagpipe.service",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 361
+      },
+      "writtenOn": "2017-03-15T16:27:24Z",
+      "side": 1,
+      "message": "bagpipe-bgp would be better as a service name, since its the name as which this component has been known until now",
+      "revId": "284b817957fa6c874f7a4e781f6f293aa6a675e6",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa98f980_f55ed211",
+        "filename": "networking-bagpipe.service",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 361
+      },
+      "writtenOn": "2017-03-15T16:27:24Z",
+      "side": 1,
+      "message": "What is needed:\n- terminating the bagpipe-bgp command with a SIGTERM\n- and then execute the cleanup command\n- on a restart only send the SIGTERM and start the process again, without the cleanup\n\nI don\u0027t know if the above will give the desired effect.",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 37
+      },
+      "revId": "284b817957fa6c874f7a4e781f6f293aa6a675e6",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa98f980_75aae2d5",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 361
+      },
+      "writtenOn": "2017-03-15T16:27:24Z",
+      "side": 1,
+      "message": "(see other comment on service name)",
+      "range": {
+        "startLine": 3,
+        "startChar": 19,
+        "endLine": 3,
+        "endChar": 38
+      },
+      "revId": "284b817957fa6c874f7a4e781f6f293aa6a675e6",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
