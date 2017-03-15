@@ -1,0 +1,14 @@
+[Unit]
+Description=BaGPipe-BGP server
+After=syslog.target network.target
+
+[Service]
+Type=simple
+User=neutron
+ExecStart=/usr/bin/bagpipe-bgp
+ExecStop=/usr/bin/bagpipe-bgp-cleanup
+KillMode=process
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
