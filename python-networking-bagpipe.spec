@@ -1,5 +1,6 @@
 %global pypi_name networking-bagpipe
 %global sname networking_bagpipe
+%global servicename bagpipe-bgp
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:           python-%{pypi_name}
@@ -10,6 +11,7 @@ Summary:        Mechanism driver for Neutron ML2 plugin using BGP E-VPNs/IP VPNs
 License:        ASL 2.0
 URL:            https://github.com/openstack/networking-bagpipe
 Source0:        http://tarballs.openstack.org/%{pypi_name}/%{pypi_name}-%{upstream_version}.tar.gz
+Source1:        %{servicename}.service
 
 BuildArch:      noarch
 
@@ -17,6 +19,7 @@ BuildRequires:  python-coverage
 BuildRequires:  python-hacking
 BuildRequires:  python-oslo-sphinx
 BuildRequires:  python-oslotest
+BuildRequires:  python-oslo-rootwrap
 BuildRequires:  python-pbr
 BuildRequires:  python-setuptools
 BuildRequires:  python-sphinx
@@ -25,6 +28,7 @@ BuildRequires:  python-testrepository
 BuildRequires:  python-testscenarios
 BuildRequires:  python-testtools
 BuildRequires:  python2-devel
+BuildRequires:  python2-pecan
 
 %description
 BaGPipe BGP is a lightweight implementation of BGP VPNs (IP VPNs and E-VPNs),
@@ -45,6 +49,8 @@ Requires:       python-oslo-i18n >= 2.1.0
 Requires:       python-oslo-log >= 3.11.0
 Requires:       python-oslo-messaging >= 5.14.0
 Requires:       python-oslo-service >= 1.10.0
+Requires:       python2-oslo-rootwrap
+Requires:       python2-pecan
 Requires:       python-setuptools
 
 %description -n python2-%{pypi_name}
@@ -54,8 +60,15 @@ platforms.
 
 %package -n python-%{pypi_name}-doc
 Summary:        networking-bagpipe documentation
+
 %description -n python-%{pypi_name}-doc
 Documentation for networking-bagpipe
+
+%package -n openstack-%{servicename}
+Summary:    Networking-BGP
+
+%description -n openstack-%{servicename}
+Bagpipe-BGP service
 
 %prep
 %autosetup -n %{pypi_name}-%{upstream_version}
@@ -64,14 +77,30 @@ rm -rf %{pypi_name}.egg-info
 
 %build
 %py2_build
-# generate html docs
-#%{__python2} setup.py build_sphinx
-# remove the sphinx-build leftovers
 rm -rf html/.{doctrees,buildinfo}
 
 %install
 %py2_install
 
+# bagpipe _sysconfdir and conf files
+mkdir -p %{buildroot}/%{_sysconfdir}/neutron/%{servicename}
+mkdir -p %{buildroot}/%{_sysconfdir}/neutron/%{servicename}/rootwrap.d
+mv %{buildroot}/etc/%{servicename}/bgp.conf.template %{buildroot}%{_sysconfdir}/neutron/%{servicename}/
+mv %{buildroot}/etc/%{servicename}/rootwrap.conf %{buildroot}%{_sysconfdir}/neutron/%{servicename}/
+mv %{buildroot}/etc/%{servicename}/rootwrap.d/linux-vxlan.filters  %{buildroot}%{_sysconfdir}/neutron/%{servicename}/rootwrap.d/linux-vxlan.filters
+mv %{buildroot}/etc/%{servicename}/rootwrap.d/mpls-ovs-dataplane.filters  %{buildroot}%{_sysconfdir}/neutron/%{servicename}/rootwrap.d/mpls-ovs-dataplane.filters
+
+# systemd service
+install -p -D -m 644 %{SOURCE1} %{buildroot}%{_unitdir}/%{servicename}.service
+
+%post -n openstack-%{servicename}
+%systemd_post %{servicename}.service
+
+%preun -n openstack-%{servicename}
+%systemd_preun %{servicename}.service
+
+%postun -n openstack-%{servicename}
+%systemd_postun_with_restart %{servicename}.service
 
 %files -n python2-%{pypi_name}
 %license LICENSE
@@ -79,11 +108,23 @@ rm -rf html/.{doctrees,buildinfo}
 %{python2_sitelib}/%{sname}
 %{python2_sitelib}/%{sname}-*.egg-info
 %{_bindir}/neutron-bagpipe-linuxbridge-agent
+%{_bindir}/bagpipe-fakerr
+%{_bindir}/bagpipe-impex2dot
+%{_bindir}/bagpipe-looking-glass
+%{_bindir}/bagpipe-rest-attach
 
 %files -n python-%{pypi_name}-doc
-#%doc html
 %license LICENSE
 
+%files -n openstack-%{servicename}
+%license LICENSE
+%{_unitdir}/%{servicename}.service
+%{_bindir}/bagpipe-bgp
+%{_bindir}/bagpipe-bgp-cleanup
+%dir  %attr(0640, neutron, neutron) %{_sysconfdir}/neutron/%{servicename}/
+%config(noreplace) %attr(0640, neutron, neutron) %{_sysconfdir}/neutron/%{servicename}/*.conf
+%config(noreplace) %attr(0640, neutron, neutron) %{_sysconfdir}/neutron/%{servicename}/rootwrap.d/*.filters
+%config(noreplace) %attr(0640, neutron, neutron) %{_sysconfdir}/neutron/%{servicename}/*.template
+
 %changelog
-* Fri Nov 11 2016 Luke Hinds <lhinds@redhat.com> - 4.0.0-2
-- Initial package.
+
