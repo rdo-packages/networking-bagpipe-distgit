@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa98f980_550cfe94",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2017-03-16T08:55:26Z",
+      "side": 1,
+      "message": "There should be a Source1 line adding the service file, and then a line in %install that copies the file to the proper location. See https://github.com/rdo-packages/networking-l2gw-distgit/blob/rpm-master/python-networking-l2gw.spec#L14 and https://github.com/rdo-packages/networking-l2gw-distgit/blob/rpm-master/python-networking-l2gw.spec#L111-L112 for an example.",
+      "revId": "9aafb127559672e56b43292035c312a239400c24",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa98f980_151276b4",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2017-03-16T08:55:26Z",
+      "side": 1,
+      "message": "Please move the subpackage definition before %prep, otherwise it is confusing to read.",
+      "range": {
+        "startLine": 74,
+        "startChar": 0,
+        "endLine": 79,
+        "endChar": 14
+      },
+      "revId": "9aafb127559672e56b43292035c312a239400c24",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa98f980_35177aa5",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2017-03-16T08:55:26Z",
+      "side": 1,
+      "message": "There is no %files -n openstack-%{servicename}, so the service file is not included anywhere.\n\nSee https://github.com/rdo-packages/networking-l2gw-distgit/blob/rpm-master/python-networking-l2gw.spec#L141-L144",
+      "revId": "9aafb127559672e56b43292035c312a239400c24",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
