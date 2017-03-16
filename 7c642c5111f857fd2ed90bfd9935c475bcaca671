@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa98f980_7572e2e6",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 5
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2017-03-16T11:37:15Z",
+      "side": 1,
+      "message": "You coud use %{servicename} macro here instead of \u0027bagpipe-bgp\u0027",
+      "range": {
+        "startLine": 110,
+        "startChar": 61,
+        "endLine": 110,
+        "endChar": 72
+      },
+      "revId": "7c642c5111f857fd2ed90bfd9935c475bcaca671",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa98f980_556dde03",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 5
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2017-03-16T11:37:15Z",
+      "side": 1,
+      "message": "You should add:\n\n%dir %{_sysconfdir}/%{servicename}\n\nTo avoid orphan directory (https://fedoraproject.org/wiki/Packaging:UnownedDirectories)",
+      "revId": "7c642c5111f857fd2ed90bfd9935c475bcaca671",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
