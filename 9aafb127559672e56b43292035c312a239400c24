@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "fa98f980_b5d7eabe",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 269
+      },
+      "writtenOn": "2017-03-16T10:07:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fa98f980_550cfe94",
+      "revId": "9aafb127559672e56b43292035c312a239400c24",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fa98f980_758822e8",
         "filename": "python-networking-bagpipe.spec",
         "patchSetId": 4
@@ -30,6 +48,30 @@
       "writtenOn": "2017-03-16T09:09:12Z",
       "side": 1,
       "message": "I think \"openstack-networking-bagpipe-bgp\" would be better that \"openstack-babpipe-bgp\" as package name.",
+      "range": {
+        "startLine": 75,
+        "startChar": 12,
+        "endLine": 75,
+        "endChar": 36
+      },
+      "revId": "9aafb127559672e56b43292035c312a239400c24",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa98f980_d5e46eae",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 269
+      },
+      "writtenOn": "2017-03-16T10:07:48Z",
+      "side": 1,
+      "message": "See the earlier comment from Thomas, who requires this naming convention (first patch had `networking` in)",
+      "parentUuid": "fa98f980_758822e8",
       "range": {
         "startLine": 75,
         "startChar": 12,
@@ -65,6 +107,30 @@
     },
     {
       "key": {
+        "uuid": "fa98f980_f5e1729b",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 269
+      },
+      "writtenOn": "2017-03-16T10:07:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fa98f980_151276b4",
+      "range": {
+        "startLine": 74,
+        "startChar": 0,
+        "endLine": 79,
+        "endChar": 14
+      },
+      "revId": "9aafb127559672e56b43292035c312a239400c24",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fa98f980_d54d4ec6",
         "filename": "python-networking-bagpipe.spec",
         "patchSetId": 4
@@ -76,6 +142,30 @@
       "writtenOn": "2017-03-16T09:09:12Z",
       "side": 1,
       "message": "Do we need this two symlinks?, we are not creating python3 packages so -2 and -%{python2_version} are not required unless there is some other reason.",
+      "range": {
+        "startLine": 97,
+        "startChar": 0,
+        "endLine": 98,
+        "endChar": 63
+      },
+      "revId": "9aafb127559672e56b43292035c312a239400c24",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa98f980_15eef68b",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 269
+      },
+      "writtenOn": "2017-03-16T10:07:48Z",
+      "side": 1,
+      "message": "yes, do need these, I tried removing them and it results in errors such as:\n\nInstalled (but unpackaged) file(s) found:\n   /usr/bin/neutron-bagpipe-linuxbridge-agent\n   /usr/bin/neutron-bagpipe-linuxbridge-agent-2\n   /usr/bin/neutron-bagpipe-linuxbridge-agent-2.7",
+      "parentUuid": "fa98f980_d54d4ec6",
       "range": {
         "startLine": 97,
         "startChar": 0,
@@ -111,6 +201,30 @@
     },
     {
       "key": {
+        "uuid": "fa98f980_35f3fa74",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 269
+      },
+      "writtenOn": "2017-03-16T10:07:48Z",
+      "side": 1,
+      "message": "Sorry not quite following what you mean here, a new subpackage?",
+      "parentUuid": "fa98f980_9553c66b",
+      "range": {
+        "startLine": 97,
+        "startChar": 0,
+        "endLine": 107,
+        "endChar": 83
+      },
+      "revId": "9aafb127559672e56b43292035c312a239400c24",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fa98f980_35177aa5",
         "filename": "python-networking-bagpipe.spec",
         "patchSetId": 4
@@ -128,6 +242,24 @@
     },
     {
       "key": {
+        "uuid": "fa98f980_55e87e7c",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 269
+      },
+      "writtenOn": "2017-03-16T10:07:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fa98f980_35177aa5",
+      "revId": "9aafb127559672e56b43292035c312a239400c24",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fa98f980_f54a52ab",
         "filename": "python-networking-bagpipe.spec",
         "patchSetId": 4
@@ -139,6 +271,30 @@
       "writtenOn": "2017-03-16T09:09:12Z",
       "side": 1,
       "message": "changelog is not used for dlrn builds and it\u0027s normally empty on rpm-master. In RDO we only use changelog for stable builds from stable branches, as ocata-rdo or newton-rdo, not in rpm-master.",
+      "range": {
+        "startLine": 113,
+        "startChar": 0,
+        "endLine": 115,
+        "endChar": 74
+      },
+      "revId": "9aafb127559672e56b43292035c312a239400c24",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa98f980_75ed828b",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 269
+      },
+      "writtenOn": "2017-03-16T10:07:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fa98f980_f54a52ab",
       "range": {
         "startLine": 113,
         "startChar": 0,
