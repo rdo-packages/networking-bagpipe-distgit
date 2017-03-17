@@ -393,6 +393,30 @@
     },
     {
       "key": {
+        "uuid": "fa98f980_b8fe0137",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2017-03-17T15:34:05Z",
+      "side": 1,
+      "message": "Separating pure python module from other content as config files, systemd units, etc.. is a good parctice for some reasons:\n\n- python module may be imported from other services without requireing full deployment of bagpipe. I\u0027m not sure if this is the case although i\u0027ve seen bgpvpn imports bagpipe, iiuc.\n\n- as preparation for incoming python3- packages. We will need python2- and python3- packages and a different one with common content. \n\nI\u0027d go with python2-networking-bagpipe and openstack-networking-bagpipe",
+      "parentUuid": "fa98f980_580c3595",
+      "range": {
+        "startLine": 97,
+        "startChar": 0,
+        "endLine": 107,
+        "endChar": 83
+      },
+      "revId": "9aafb127559672e56b43292035c312a239400c24",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fa98f980_35177aa5",
         "filename": "python-networking-bagpipe.spec",
         "patchSetId": 4
