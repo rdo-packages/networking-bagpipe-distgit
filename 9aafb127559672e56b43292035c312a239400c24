@@ -345,6 +345,30 @@
     },
     {
       "key": {
+        "uuid": "fa98f980_d84825cf",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2017-03-17T14:09:20Z",
+      "side": 1,
+      "message": "Before this review, building this spec produced following packages:\n\n-python-networking-bagpipe-doc\n-python2-networking-bagpipe\n\nWith this review, you are adding a new package openstack-bagpipe-bgp or openstack-networking-bgp to this list so it\u0027s a new subpackage.\n\nAs described in your comment (bagpipe-bgp is mandatory to use networking-bagpipe), i agree the right name for the new package would be openstack-networking-bagpipe.",
+      "parentUuid": "fa98f980_18046d7d",
+      "range": {
+        "startLine": 97,
+        "startChar": 0,
+        "endLine": 107,
+        "endChar": 83
+      },
+      "revId": "9aafb127559672e56b43292035c312a239400c24",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fa98f980_35177aa5",
         "filename": "python-networking-bagpipe.spec",
         "patchSetId": 4
