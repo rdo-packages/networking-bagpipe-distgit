@@ -369,6 +369,30 @@
     },
     {
       "key": {
+        "uuid": "fa98f980_580c3595",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 361
+      },
+      "writtenOn": "2017-03-17T14:23:26Z",
+      "side": 1,
+      "message": "So, why not, *instead* of the existing names:\n- openstack-networking-bagpipe-doc\n- openstack-networking-bagpipe\n\n?",
+      "parentUuid": "fa98f980_d84825cf",
+      "range": {
+        "startLine": 97,
+        "startChar": 0,
+        "endLine": 107,
+        "endChar": 83
+      },
+      "revId": "9aafb127559672e56b43292035c312a239400c24",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fa98f980_35177aa5",
         "filename": "python-networking-bagpipe.spec",
         "patchSetId": 4
