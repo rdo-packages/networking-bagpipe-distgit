@@ -16,6 +16,24 @@
       "revId": "829d2b8d60aada993c2b170c0ea7fde0632fcc67",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa98f980_7b9e5358",
+        "filename": "bagpipe-bgp.service",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2017-03-20T18:42:49Z",
+      "side": 1,
+      "message": "Just for reference why I think ExecStopPost might work:\n\nhttps://www.freedesktop.org/software/systemd/man/systemd.service.html#ExecStopPost\u003d",
+      "parentUuid": "fa98f980_5b0fcfe1",
+      "revId": "829d2b8d60aada993c2b170c0ea7fde0632fcc67",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
