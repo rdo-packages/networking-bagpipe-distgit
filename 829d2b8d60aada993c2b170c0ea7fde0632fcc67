@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa98f980_5b0fcfe1",
+        "filename": "bagpipe-bgp.service",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 361
+      },
+      "writtenOn": "2017-03-20T13:58:03Z",
+      "side": 1,
+      "message": "My initial comment, I think perhs still holds: does the above send a kill signal to bagpipe-bgp, waits for it to close, and then starts bagpipe-bgp-cleanup ?\n\nI\u0027m wondering in fact if Leif comment was perhaps lost ?\n(\"I think you might be able to just s/ExecStop/ExecStopPost/ here.\")",
+      "revId": "829d2b8d60aada993c2b170c0ea7fde0632fcc67",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
