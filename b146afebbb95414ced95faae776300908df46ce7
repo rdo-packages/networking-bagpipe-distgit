@@ -46,6 +46,30 @@
       "revId": "b146afebbb95414ced95faae776300908df46ce7",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa98f980_6c83f7cc",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 7
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 269
+      },
+      "writtenOn": "2017-03-24T07:25:08Z",
+      "side": 1,
+      "message": "ack, will make the change.",
+      "parentUuid": "fa98f980_ec6b6783",
+      "range": {
+        "startLine": 111,
+        "startChar": 0,
+        "endLine": 114,
+        "endChar": 86
+      },
+      "revId": "b146afebbb95414ced95faae776300908df46ce7",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
