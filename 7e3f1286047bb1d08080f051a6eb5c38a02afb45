@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa98f980_89947f38",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 8
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 361
+      },
+      "writtenOn": "2017-04-06T14:49:52Z",
+      "side": 1,
+      "message": "For these to be found at runtime, root_helper_daemon has to be modified in bgp.conf .",
+      "range": {
+        "startLine": 89,
+        "startChar": 0,
+        "endLine": 91,
+        "endChar": 161
+      },
+      "revId": "7e3f1286047bb1d08080f051a6eb5c38a02afb45",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
