@@ -1,0 +1,209 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9aa7fdbe_d1a0e0f6",
+        "filename": "bagpipe-bgp.service",
+        "patchSetId": 9
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2017-07-07T17:11:02Z",
+      "side": 1,
+      "message": "The user neutron is created by package openstack-neutron-common but package openstack-bagpipe-bgp doesn\u0027t depends on it so it will fail because neutron user doesn\u0027t exist. You need to add that dependency.",
+      "range": {
+        "startLine": 7,
+        "startChar": 5,
+        "endLine": 7,
+        "endChar": 12
+      },
+      "revId": "2d70ef97669ee6ae6064eebb643cac4181c23df8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa7fdbe_f17c0475",
+        "filename": "bagpipe-bgp.service",
+        "patchSetId": 9
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2017-07-07T17:11:02Z",
+      "side": 1,
+      "message": "just as suggestion, most openstack services send logs to files under /var/log/\u003cservice\u003e, but with this configuration is sending it only to syslog. Maybe you could add --log-file\u003d/var/log/neutron/bagpipe-bgp.log",
+      "revId": "2d70ef97669ee6ae6064eebb643cac4181c23df8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa7fdbe_1182684f",
+        "filename": "bagpipe-bgp.service",
+        "patchSetId": 9
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2017-07-07T17:11:02Z",
+      "side": 1,
+      "message": "When stoping the service it\u0027s failing with error:\n\n oslo_config.cfg.ConfigFilesNotFoundError: Failed to find some config files: /etc/bagpipe-bgp/bgp.conf\n\nMissing --config-file /etc/neutron/bagpipe-bgp/bgp.conf option?",
+      "revId": "2d70ef97669ee6ae6064eebb643cac4181c23df8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa7fdbe_11ab48d9",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 9
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2017-07-07T17:11:02Z",
+      "side": 1,
+      "message": "it should be python2-oslo-rootwrap. Note that we add a provides to python- in all python2- so python2- should only be used for python2-devel.",
+      "range": {
+        "startLine": 30,
+        "startChar": 0,
+        "endLine": 30,
+        "endChar": 29
+      },
+      "revId": "2d70ef97669ee6ae6064eebb643cac4181c23df8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa7fdbe_31af6ce5",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 9
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2017-07-07T17:11:02Z",
+      "side": 1,
+      "message": "ditto",
+      "revId": "2d70ef97669ee6ae6064eebb643cac4181c23df8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa7fdbe_51acf0ed",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 9
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2017-07-07T17:11:02Z",
+      "side": 1,
+      "message": "ditto",
+      "revId": "2d70ef97669ee6ae6064eebb643cac4181c23df8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa7fdbe_71b9f42d",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 9
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2017-07-07T17:11:02Z",
+      "side": 1,
+      "message": "python2",
+      "revId": "2d70ef97669ee6ae6064eebb643cac4181c23df8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa7fdbe_f1a5e404",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 9
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2017-07-07T17:11:02Z",
+      "side": 1,
+      "message": "Missing:\n\nRequiers:     python-pyroute2",
+      "revId": "2d70ef97669ee6ae6064eebb643cac4181c23df8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa7fdbe_915f380e",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 9
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2017-07-07T17:11:02Z",
+      "side": 1,
+      "message": "package openstack-networking-bgp should require python-networking-bagpipe:\n\nRequires:  python-networking-bagpipe \u003d %{version}-%{release}",
+      "revId": "2d70ef97669ee6ae6064eebb643cac4181c23df8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa7fdbe_91b6583c",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 9
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2017-07-07T17:11:02Z",
+      "side": 1,
+      "message": "It should be:\n\nmv %{buildroot}/etc/%{servicename}/bgp.conf.template %{buildroot}%{_sysconfdir}/neutron/%{servicename}/bgp.conf\n\nFile should be bgp.conf, not bgp.conf.template under /etc/neutron/bagpipe-bgp",
+      "revId": "2d70ef97669ee6ae6064eebb643cac4181c23df8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa7fdbe_b1827c50",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 9
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2017-07-07T17:11:02Z",
+      "side": 1,
+      "message": "it should be 0750",
+      "range": {
+        "startLine": 125,
+        "startChar": 12,
+        "endLine": 125,
+        "endChar": 16
+      },
+      "revId": "2d70ef97669ee6ae6064eebb643cac4181c23df8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
