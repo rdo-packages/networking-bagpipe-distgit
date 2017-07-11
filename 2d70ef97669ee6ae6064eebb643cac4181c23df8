@@ -567,6 +567,24 @@
     },
     {
       "key": {
+        "uuid": "9aa7fdbe_e5d51e44",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 9
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 361
+      },
+      "writtenOn": "2017-07-11T12:19:18Z",
+      "side": 1,
+      "message": "At this point, moving /etc/bagpipe-bgp to /etc/neutron/bagpipe-bgp has been an RDO-only decision. Enforcing this move upstream may have side-effects on other deployments and/or packaging. I\u0027d prefer to keep a more conservative approach, unless there are compelling arguments to do otherwise.",
+      "parentUuid": "9aa7fdbe_fa3bf9e8",
+      "revId": "2d70ef97669ee6ae6064eebb643cac4181c23df8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9aa7fdbe_b1827c50",
         "filename": "python-networking-bagpipe.spec",
         "patchSetId": 9
