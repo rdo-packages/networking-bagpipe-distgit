@@ -190,6 +190,30 @@
     },
     {
       "key": {
+        "uuid": "9aa7fdbe_da1715a2",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 9
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2017-07-11T09:23:47Z",
+      "side": 1,
+      "message": "Sorry, i messed it up in this comment. I meant it should be python-oslo-rootwrap in line 52",
+      "parentUuid": "9aa7fdbe_7ac46940",
+      "range": {
+        "startLine": 30,
+        "startChar": 0,
+        "endLine": 30,
+        "endChar": 29
+      },
+      "revId": "2d70ef97669ee6ae6064eebb643cac4181c23df8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9aa7fdbe_31af6ce5",
         "filename": "python-networking-bagpipe.spec",
         "patchSetId": 9
