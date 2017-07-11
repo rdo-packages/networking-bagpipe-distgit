@@ -531,6 +531,24 @@
     },
     {
       "key": {
+        "uuid": "9aa7fdbe_da68f5f7",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 9
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 361
+      },
+      "writtenOn": "2017-07-11T10:35:01Z",
+      "side": 1,
+      "message": "Ok, makes sense then.\n\nWhen networking-bagpipe supports oslo-config-generator, using that we\u0027ll be even better.\n\nThe thing is that, currently since bgp.conf.template is provided as an example rather than a reference, it includes things that may vary from the cod-builtin defaults.  And that does vary in some case. In particular I have in mind :\n\n  root_helper_daemon \u003d sudo /usr/local/bin/oslo-rootwrap-daemon /etc/bagpipe-bgp/rootwrap.conf\n\n\nThat vary from the default (empty) and that will fail here in particular because the rootwrap conf files are moved in a different location.\n\nSo if using bgp.conf.template as a base for bgp.conf, then this parameter should be changed to point to the right location for rootwrap.conf .",
+      "parentUuid": "9aa7fdbe_9a902dee",
+      "revId": "2d70ef97669ee6ae6064eebb643cac4181c23df8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9aa7fdbe_b1827c50",
         "filename": "python-networking-bagpipe.spec",
         "patchSetId": 9
