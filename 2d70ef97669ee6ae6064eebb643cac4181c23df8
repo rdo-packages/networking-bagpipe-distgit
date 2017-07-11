@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "9aa7fdbe_9a73cd4c",
+        "filename": "bagpipe-bgp.service",
+        "patchSetId": 9
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 269
+      },
+      "writtenOn": "2017-07-11T09:02:29Z",
+      "side": 1,
+      "message": "do you recommend the spec file adds the user or we add a requires to openstack-neutron-common?",
+      "parentUuid": "9aa7fdbe_d1a0e0f6",
+      "range": {
+        "startLine": 7,
+        "startChar": 5,
+        "endLine": 7,
+        "endChar": 12
+      },
+      "revId": "2d70ef97669ee6ae6064eebb643cac4181c23df8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9aa7fdbe_f17c0475",
         "filename": "bagpipe-bgp.service",
         "patchSetId": 9
@@ -42,6 +66,24 @@
     },
     {
       "key": {
+        "uuid": "9aa7fdbe_fa99396f",
+        "filename": "bagpipe-bgp.service",
+        "patchSetId": 9
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 269
+      },
+      "writtenOn": "2017-07-11T09:02:29Z",
+      "side": 1,
+      "message": "@thomas - thoughts?",
+      "parentUuid": "9aa7fdbe_f17c0475",
+      "revId": "2d70ef97669ee6ae6064eebb643cac4181c23df8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9aa7fdbe_1182684f",
         "filename": "bagpipe-bgp.service",
         "patchSetId": 9
@@ -53,6 +95,24 @@
       "writtenOn": "2017-07-07T17:11:02Z",
       "side": 1,
       "message": "When stoping the service it\u0027s failing with error:\n\n oslo_config.cfg.ConfigFilesNotFoundError: Failed to find some config files: /etc/bagpipe-bgp/bgp.conf\n\nMissing --config-file /etc/neutron/bagpipe-bgp/bgp.conf option?",
+      "revId": "2d70ef97669ee6ae6064eebb643cac4181c23df8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa7fdbe_1a9fdd53",
+        "filename": "bagpipe-bgp.service",
+        "patchSetId": 9
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 269
+      },
+      "writtenOn": "2017-07-11T09:02:29Z",
+      "side": 1,
+      "message": "@thomas - this is contingent upon our discussion last week, will wait for the consensus here and then amend accordingly.",
+      "parentUuid": "9aa7fdbe_1182684f",
       "revId": "2d70ef97669ee6ae6064eebb643cac4181c23df8",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
@@ -82,6 +142,30 @@
     },
     {
       "key": {
+        "uuid": "9aa7fdbe_7ac46940",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 9
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 269
+      },
+      "writtenOn": "2017-07-11T09:02:29Z",
+      "side": 1,
+      "message": "ack",
+      "parentUuid": "9aa7fdbe_11ab48d9",
+      "range": {
+        "startLine": 30,
+        "startChar": 0,
+        "endLine": 30,
+        "endChar": 29
+      },
+      "revId": "2d70ef97669ee6ae6064eebb643cac4181c23df8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9aa7fdbe_31af6ce5",
         "filename": "python-networking-bagpipe.spec",
         "patchSetId": 9
@@ -93,6 +177,24 @@
       "writtenOn": "2017-07-07T17:11:02Z",
       "side": 1,
       "message": "ditto",
+      "revId": "2d70ef97669ee6ae6064eebb643cac4181c23df8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa7fdbe_9ac10d31",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 9
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 269
+      },
+      "writtenOn": "2017-07-11T09:02:29Z",
+      "side": 1,
+      "message": "ack",
+      "parentUuid": "9aa7fdbe_31af6ce5",
       "revId": "2d70ef97669ee6ae6064eebb643cac4181c23df8",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
@@ -116,6 +218,24 @@
     },
     {
       "key": {
+        "uuid": "9aa7fdbe_baddf116",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 9
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 269
+      },
+      "writtenOn": "2017-07-11T09:02:29Z",
+      "side": 1,
+      "message": "ack",
+      "parentUuid": "9aa7fdbe_51acf0ed",
+      "revId": "2d70ef97669ee6ae6064eebb643cac4181c23df8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9aa7fdbe_71b9f42d",
         "filename": "python-networking-bagpipe.spec",
         "patchSetId": 9
@@ -127,6 +247,24 @@
       "writtenOn": "2017-07-07T17:11:02Z",
       "side": 1,
       "message": "python2",
+      "revId": "2d70ef97669ee6ae6064eebb643cac4181c23df8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa7fdbe_dae2b5d4",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 9
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 269
+      },
+      "writtenOn": "2017-07-11T09:02:29Z",
+      "side": 1,
+      "message": "ack",
+      "parentUuid": "9aa7fdbe_71b9f42d",
       "revId": "2d70ef97669ee6ae6064eebb643cac4181c23df8",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
@@ -178,6 +316,24 @@
       "writtenOn": "2017-07-07T17:11:02Z",
       "side": 1,
       "message": "It should be:\n\nmv %{buildroot}/etc/%{servicename}/bgp.conf.template %{buildroot}%{_sysconfdir}/neutron/%{servicename}/bgp.conf\n\nFile should be bgp.conf, not bgp.conf.template under /etc/neutron/bagpipe-bgp",
+      "revId": "2d70ef97669ee6ae6064eebb643cac4181c23df8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa7fdbe_3ad101fc",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 9
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 269
+      },
+      "writtenOn": "2017-07-11T09:02:29Z",
+      "side": 1,
+      "message": "@thomas as before",
+      "parentUuid": "9aa7fdbe_91b6583c",
       "revId": "2d70ef97669ee6ae6064eebb643cac4181c23df8",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
