@@ -108,6 +108,24 @@
     },
     {
       "key": {
+        "uuid": "9aa7fdbe_fae8597e",
+        "filename": "bagpipe-bgp.service",
+        "patchSetId": 9
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 361
+      },
+      "writtenOn": "2017-07-11T09:54:59Z",
+      "side": 1,
+      "message": "+1",
+      "parentUuid": "9aa7fdbe_fa99396f",
+      "revId": "2d70ef97669ee6ae6064eebb643cac4181c23df8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9aa7fdbe_1182684f",
         "filename": "bagpipe-bgp.service",
         "patchSetId": 9
@@ -137,6 +155,24 @@
       "side": 1,
       "message": "@thomas - this is contingent upon our discussion last week, will wait for the consensus here and then amend accordingly.",
       "parentUuid": "9aa7fdbe_1182684f",
+      "revId": "2d70ef97669ee6ae6064eebb643cac4181c23df8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa7fdbe_1aeefd88",
+        "filename": "bagpipe-bgp.service",
+        "patchSetId": 9
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 361
+      },
+      "writtenOn": "2017-07-11T09:54:59Z",
+      "side": 1,
+      "message": "I\u0027m surprised, since the command definition actually provides the right location. I need to check that bagpipe-bgp actually behaves as expected when provided with a non default config file location -- there may be a bug there even though we use standard oslo logging constructs.",
+      "parentUuid": "9aa7fdbe_1a9fdd53",
       "revId": "2d70ef97669ee6ae6064eebb643cac4181c23df8",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
@@ -384,6 +420,29 @@
     },
     {
       "key": {
+        "uuid": "9aa7fdbe_3a02e13e",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 9
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 361
+      },
+      "writtenOn": "2017-07-11T09:54:59Z",
+      "side": 1,
+      "message": "Sorry for not catching that earlier, \nthis is actually potentially misleading:\n- the fullname for the service for which bagpipe is the reference driver is networking-bgpvpn (does more than base BGP by doing BGP VPN extensions)\n- networking-bagpipe provides more than a driver for this service (also does neutron ml2, and SFC as a WIP)\n\n\"Networking-BaGPipe\" would be better",
+      "range": {
+        "startLine": 69,
+        "startChar": 23,
+        "endLine": 69,
+        "endChar": 26
+      },
+      "revId": "2d70ef97669ee6ae6064eebb643cac4181c23df8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9aa7fdbe_915f380e",
         "filename": "python-networking-bagpipe.spec",
         "patchSetId": 9
@@ -430,6 +489,24 @@
       "side": 1,
       "message": "@thomas as before",
       "parentUuid": "9aa7fdbe_91b6583c",
+      "revId": "2d70ef97669ee6ae6064eebb643cac4181c23df8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa7fdbe_5affa534",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 9
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 361
+      },
+      "writtenOn": "2017-07-11T09:54:59Z",
+      "side": 1,
+      "message": "The file needs to exists so that the service can start.\nHowever:\n- using bgp.conf.template is not needed, the code having proper defaults in place for all options for which it makes sense\n- for the options that can\u0027t have a meaningful default (e.g. local_address) we can\u0027t do anything, and have to accept that the service won\u0027t start without these being tuned to a meaningful value -- using bgp.conf.template won\u0027t change that\n\nSo, doing a touch %{buildroot}%{_sysconfdir}/neutron/%{servicename}/bgp.conf would work as well.",
+      "parentUuid": "9aa7fdbe_3ad101fc",
       "revId": "2d70ef97669ee6ae6064eebb643cac4181c23df8",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
