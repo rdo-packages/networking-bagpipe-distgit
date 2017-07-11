@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9aa7fdbe_7af2a99b",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 10
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 87
+      },
+      "writtenOn": "2017-07-11T09:17:03Z",
+      "side": 1,
+      "message": "Stevedore, six are requirements: http://git.openstack.org/cgit/openstack/networking-bagpipe/tree/networking_bagpipe/bagpipe_bgp/bgp_daemon.py?id\u003d19cd75e0016786b3cf782855dd74e6f1dade8920#n24\n\nnetaddr: http://git.openstack.org/cgit/openstack/networking-bagpipe/tree/networking_bagpipe/bagpipe_bgp/vpn/vpn_instance.py?id\u003d19cd75e0016786b3cf782855dd74e6f1dade8920#n25",
+      "revId": "acef6660a4e6cb8e559a30a3f96da3b3fd793803",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
