@@ -513,6 +513,24 @@
     },
     {
       "key": {
+        "uuid": "9aa7fdbe_9a902dee",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 9
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2017-07-11T10:25:15Z",
+      "side": 1,
+      "message": "Although file content needs to be adjusted as you mentioned, common practice in RDO is to provide a config file with defaults coming from .template or oslo-config-generator for projects that support it. This is useful for users to know what options exist and what to modify.\n\nProviding empty config files have been discussed in the past but in that case we should at least provide the template as documentation file in the package.\n\nI\u0027d be inclined to provide the bgp.conf.template as /etc/neutron/networking-bgp/bgp.conf for consistency with the rest of packages.",
+      "parentUuid": "9aa7fdbe_5affa534",
+      "revId": "2d70ef97669ee6ae6064eebb643cac4181c23df8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9aa7fdbe_b1827c50",
         "filename": "python-networking-bagpipe.spec",
         "patchSetId": 9
