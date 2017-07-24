@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "9aa7fdbe_f12cf24c",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 11
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 269
+      },
+      "writtenOn": "2017-07-24T08:58:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9aa7fdbe_da9ab513",
+      "revId": "dbe13e02ced84ca990ba24aaf234e781b626eb01",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9aa7fdbe_ba95f1e5",
         "filename": "python-networking-bagpipe.spec",
         "patchSetId": 11
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "9aa7fdbe_113256a7",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 11
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 269
+      },
+      "writtenOn": "2017-07-24T08:58:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9aa7fdbe_ba95f1e5",
+      "revId": "dbe13e02ced84ca990ba24aaf234e781b626eb01",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9aa7fdbe_5a86c5ba",
         "filename": "python-networking-bagpipe.spec",
         "patchSetId": 11
@@ -47,6 +83,24 @@
       "writtenOn": "2017-07-11T10:03:19Z",
       "side": 1,
       "message": "using install -p -D -m 0640 \u003cfile\u003e \u003cinstall-path\u003e would also ensure we have the right perms, and create the directories.",
+      "revId": "dbe13e02ced84ca990ba24aaf234e781b626eb01",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa7fdbe_7120024a",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 11
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 269
+      },
+      "writtenOn": "2017-07-24T08:58:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9aa7fdbe_5a86c5ba",
       "revId": "dbe13e02ced84ca990ba24aaf234e781b626eb01",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
