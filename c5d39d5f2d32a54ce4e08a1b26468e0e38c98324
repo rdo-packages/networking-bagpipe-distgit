@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9aa7fdbe_1705e610",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 12
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2017-07-25T08:23:27Z",
+      "side": 1,
+      "message": "This should have destination file name:\n\ninstall -p -D -m 0640 %{buildroot}/etc/%{servicename}/bgp.conf.template %{buildroot}%{_sysconfdir}/neutron/%{servicename}/bgp.conf\n\nRemember as per previous discussion about file name, we need a bgp.conf file here, not bgp.conf.template.",
+      "range": {
+        "startLine": 92,
+        "startChar": 0,
+        "endLine": 92,
+        "endChar": 122
+      },
+      "revId": "c5d39d5f2d32a54ce4e08a1b26468e0e38c98324",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa7fdbe_370aea21",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 12
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2017-07-25T08:23:27Z",
+      "side": 1,
+      "message": "We shouldn\u0027t include .template but actual config files under _sysconfdir.",
+      "range": {
+        "startLine": 131,
+        "startChar": 0,
+        "endLine": 131,
+        "endChar": 97
+      },
+      "revId": "c5d39d5f2d32a54ce4e08a1b26468e0e38c98324",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
