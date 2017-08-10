@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a890539_e58531ae",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 14
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 303
+      },
+      "writtenOn": "2017-08-10T15:37:04Z",
+      "side": 1,
+      "message": "I\u0027m not sure this is needed but it provides the /etc/neutron configs so I thought it might need to be there since we\u0027re putting configs into neutron",
+      "range": {
+        "startLine": 60,
+        "startChar": 0,
+        "endLine": 60,
+        "endChar": 40
+      },
+      "revId": "e14cb84b77bceb80fabcca559c6a8c623be1c1f4",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
