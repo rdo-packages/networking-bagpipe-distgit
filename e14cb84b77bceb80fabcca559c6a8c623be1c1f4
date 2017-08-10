@@ -69,6 +69,30 @@
       "revId": "e14cb84b77bceb80fabcca559c6a8c623be1c1f4",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a890539_c5af552a",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 14
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2017-08-10T15:51:57Z",
+      "side": 1,
+      "message": "It\u0027s ok as-is, as we are copying it to the same filename",
+      "parentUuid": "5a890539_45bc456d",
+      "range": {
+        "startLine": 94,
+        "startChar": 0,
+        "endLine": 94,
+        "endChar": 118
+      },
+      "revId": "e14cb84b77bceb80fabcca559c6a8c623be1c1f4",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
