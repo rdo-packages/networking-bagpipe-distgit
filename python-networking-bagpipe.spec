@@ -135,3 +135,4 @@ install -p -D -m 644 %{SOURCE1} %{buildroot}%{_unitdir}/%{servicename}.service
 
 %changelog
 
+# REMOVEME: error caused by commit https://github.com/openstack/networking-bagpipe/commit/1a3f1415a74c32ca2fc171a8acd78cf8551db233
