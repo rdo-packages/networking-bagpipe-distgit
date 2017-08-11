@@ -16,7 +16,6 @@ Source1:        %{servicename}.service
 BuildArch:      noarch
 
 BuildRequires:  python2-devel
-BuildRequires:  python-coverage
 BuildRequires:  python-hacking
 BuildRequires:  python-oslo-sphinx
 BuildRequires:  python-oslotest
