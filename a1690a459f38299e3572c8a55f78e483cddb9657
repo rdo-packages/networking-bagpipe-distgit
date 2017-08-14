@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a890539_44f9a24c",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2017-08-14T18:01:27Z",
+      "side": 1,
+      "message": "Missing:\n\nRequires:       python-oslo-serialization \u003e\u003d 1.10.0",
+      "revId": "a1690a459f38299e3572c8a55f78e483cddb9657",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a890539_24fc963e",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2017-08-14T18:01:27Z",
+      "side": 1,
+      "message": "\u003e\u003d 5.0.0",
+      "revId": "a1690a459f38299e3572c8a55f78e483cddb9657",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
