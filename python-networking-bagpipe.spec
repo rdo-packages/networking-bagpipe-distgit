@@ -1,4 +1,3 @@
-%global milestone .0rc2
 %global pypi_name networking-bagpipe
 %global sname networking_bagpipe
 %global servicename bagpipe-bgp
@@ -6,14 +5,12 @@
 
 Name:           python-%{pypi_name}
 Version:        7.0.0
-Release:        0.1%{?milestone}%{?dist}
+Release:        1%{?dist}
 Summary:        Mechanism driver for Neutron ML2 plugin using BGP E-VPNs/IP VPNs as a backend
 
 License:        ASL 2.0
 URL:            https://github.com/openstack/networking-bagpipe
 Source0:        http://tarballs.openstack.org/%{pypi_name}/%{pypi_name}-%{upstream_version}.tar.gz
-#
-# patches_base=7.0.0.0rc2
 #
 
 Source1:        %{servicename}.service
@@ -140,6 +137,9 @@ install -p -D -m 644 %{SOURCE1} %{buildroot}%{_unitdir}/%{servicename}.service
 %config(noreplace) %attr(0640, neutron, neutron) %{_sysconfdir}/neutron/%{servicename}/rootwrap.d/*.filters
 
 %changelog
+* Wed Aug 30 2017 rdo-trunk <javier.pena@redhat.com> 7.0.0-1
+- Update to 7.0.0
+
 * Fri Aug 25 2017 Alfredo Moralejo <amoralej@redhat.com> 7.0.0-0.1.0rc2
 - Update to 7.0.0.0rc2
 
