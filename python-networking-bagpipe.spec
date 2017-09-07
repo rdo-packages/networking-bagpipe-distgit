@@ -3,6 +3,11 @@
 %global servicename bagpipe-bgp
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
+%global common_desc \
+BaGPipe BGP is a lightweight implementation of BGP VPNs (IP VPNs and E-VPNs), \
+targeting deployments on servers hosting VMs, in particular for Openstack/KVM \
+platforms.
+
 Name:           python-%{pypi_name}
 Version:        XXX
 Release:        XXX
@@ -30,9 +35,7 @@ BuildRequires:  python-testtools
 BuildRequires:  python-pecan
 
 %description
-BaGPipe BGP is a lightweight implementation of BGP VPNs (IP VPNs and E-VPNs),
-targeting deployments on servers hosting VMs, in particular for Openstack/KVM
-platforms.
+%{common_desc}
 
 %package -n     python2-%{pypi_name}
 Summary:        Mechanism driver for Neutron ML2 plugin using BGP E-VPNs/IP VPNs as a backend
@@ -59,9 +62,7 @@ Requires:       python-stevedore
 Requires:       python-six
 
 %description -n python2-%{pypi_name}
-BaGPipe BGP is a lightweight implementation of BGP VPNs (IP VPNs and E-VPNs),
-targeting deployments on servers hosting VMs, in particular for Openstack/KVM
-platforms.
+%{common_desc}
 
 %package -n python-%{pypi_name}-doc
 Summary:        networking-bagpipe documentation
