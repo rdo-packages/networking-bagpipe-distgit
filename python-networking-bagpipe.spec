@@ -33,7 +33,7 @@ BuildRequires:  python-testrepository
 BuildRequires:  python-testscenarios
 BuildRequires:  python-testtools
 BuildRequires:  python-pecan
-
+BuildRequires:  systemd
 %description
 %{common_desc}
 
@@ -74,6 +74,9 @@ Documentation for networking-bagpipe
 Summary:    Networking-BaGPipe
 Requires:   python-networking-bagpipe = %{version}-%{release}
 Requires:   openstack-neutron-common
+Requires(post):   systemd
+Requires(preun):  systemd
+Requires(postun): systemd
 
 %description -n openstack-%{servicename}
 Bagpipe-BGP service
