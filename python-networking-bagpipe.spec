@@ -21,18 +21,16 @@ Source1:        %{servicename}.service
 BuildArch:      noarch
 
 BuildRequires:  python2-devel
-BuildRequires:  python-hacking
-BuildRequires:  python-oslo-sphinx
-BuildRequires:  python-oslotest
-BuildRequires:  python-oslo-rootwrap
-BuildRequires:  python-pbr
-BuildRequires:  python-setuptools
-BuildRequires:  python-sphinx
-BuildRequires:  python-subunit
-BuildRequires:  python-testrepository
-BuildRequires:  python-testscenarios
-BuildRequires:  python-testtools
-BuildRequires:  python-pecan
+BuildRequires:  python2-hacking
+BuildRequires:  python2-oslotest
+BuildRequires:  python2-oslo-rootwrap
+BuildRequires:  python2-pbr
+BuildRequires:  python2-setuptools
+BuildRequires:  python2-subunit
+BuildRequires:  python2-testrepository
+BuildRequires:  python2-testscenarios
+BuildRequires:  python2-testtools
+BuildRequires:  python2-pecan
 BuildRequires:  systemd
 %description
 %{common_desc}
@@ -41,25 +39,26 @@ BuildRequires:  systemd
 Summary:        Mechanism driver for Neutron ML2 plugin using BGP E-VPNs/IP VPNs as a backend
 %{?python_provide:%python_provide python2-%{pypi_name}}
 
-Requires:       python-pbr >= 2.0.0
-Requires:       python-babel >= 2.3.4
-Requires:       python-neutron-lib >= 1.9.0
-Requires:       python-netaddr
-Requires:       python-oslo-db >= 4.24.0
-Requires:       python-oslo-config >= 2:4.0.0
-Requires:       python-oslo-concurrency >= 3.8.0
-Requires:       python-oslo-i18n >= 2.1.0
-Requires:       python-oslo-log >= 3.22.0
-Requires:       python-oslo-messaging >= 5.24.2
-Requires:       python-oslo-serialization >= 1.10.0
-Requires:       python-oslo-service >= 1.10.0
-Requires:       python-oslo-rootwrap >= 5.0.0
-Requires:       python-pecan
-Requires:       python-setuptools
-Requires:       python-exabgp >= 4.0.1
-Requires:       python-pyroute2
-Requires:       python-stevedore
-Requires:       python-six
+Requires:       python2-pbr >= 2.0.0
+Requires:       python2-babel >= 2.3.4
+Requires:       python2-neutron-lib >= 1.13.0
+Requires:       python2-netaddr
+Requires:       python2-oslo-db >= 4.27.0
+Requires:       python2-oslo-config >= 2:5.1.0
+Requires:       python2-oslo-concurrency >= 3.25.0
+Requires:       python2-oslo-i18n >= 3.15.3
+Requires:       python2-oslo-log >= 3.36.0
+Requires:       python2-oslo-messaging >= 5.29.0
+Requires:       python2-oslo-serialization >= 2.18.0
+Requires:       python2-oslo-service >= 1.24.0
+Requires:       python2-oslo-rootwrap >= 5.8.0
+Requires:       python2-pecan
+Requires:       python2-setuptools
+Requires:       python2-exabgp >= 4.0.1
+Requires:       python2-pyroute2
+Requires:       python2-stevedore
+Requires:       python2-six
+Requires:       python2-oslo-versionedobjects >= 1.31.2
 
 %description -n python2-%{pypi_name}
 %{common_desc}
