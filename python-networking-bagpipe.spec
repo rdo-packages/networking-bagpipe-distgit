@@ -1,3 +1,4 @@
+%global milestone .0rc1
 %global pypi_name networking-bagpipe
 %global sname networking_bagpipe
 %global servicename bagpipe-bgp
@@ -9,13 +10,17 @@ targeting deployments on servers hosting VMs, in particular for Openstack/KVM \
 platforms.
 
 Name:           python-%{pypi_name}
-Version:        XXX
-Release:        XXX
+Version:        8.0.0
+Release:        0.1%{?milestone}%{?dist}
 Summary:        Mechanism driver for Neutron ML2 plugin using BGP E-VPNs/IP VPNs as a backend
 
 License:        ASL 2.0
 URL:            https://github.com/openstack/networking-bagpipe
 Source0:        http://tarballs.openstack.org/%{pypi_name}/%{pypi_name}-%{upstream_version}.tar.gz
+#
+# patches_base=8.0.0.0rc1
+#
+
 Source1:        %{servicename}.service
 
 BuildArch:      noarch
@@ -135,4 +140,7 @@ install -p -D -m 644 %{SOURCE1} %{buildroot}%{_unitdir}/%{servicename}.service
 %config(noreplace) %attr(0640, neutron, neutron) %{_sysconfdir}/neutron/%{servicename}/rootwrap.d/*.filters
 
 %changelog
+* Mon Feb 19 2018 RDO <dev@lists.rdoproject.org> 8.0.0-0.1.0rc1
+- Update to 8.0.0.0rc1
+
 
