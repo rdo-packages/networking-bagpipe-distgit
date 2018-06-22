@@ -116,7 +116,6 @@ install -p -D -m 644 %{SOURCE1} %{buildroot}%{_unitdir}/%{servicename}.service
 %doc README.rst
 %{python2_sitelib}/%{sname}
 %{python2_sitelib}/%{sname}-*.egg-info
-%{_bindir}/neutron-bagpipe-linuxbridge-agent
 %{_bindir}/bagpipe-fakerr
 %{_bindir}/bagpipe-impex2dot
 %{_bindir}/bagpipe-looking-glass
