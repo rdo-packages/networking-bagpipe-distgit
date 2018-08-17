@@ -41,10 +41,10 @@ Summary:        Mechanism driver for Neutron ML2 plugin using BGP E-VPNs/IP VPNs
 
 Requires:       python2-pbr >= 2.0.0
 Requires:       python2-babel >= 2.3.4
-Requires:       python2-neutron-lib >= 1.13.0
+Requires:       python2-neutron-lib >= 1.18.0
 Requires:       python2-netaddr
 Requires:       python2-oslo-db >= 4.27.0
-Requires:       python2-oslo-config >= 2:5.1.0
+Requires:       python2-oslo-config >= 2:5.2.0
 Requires:       python2-oslo-concurrency >= 3.25.0
 Requires:       python2-oslo-i18n >= 3.15.3
 Requires:       python2-oslo-log >= 3.36.0
@@ -59,6 +59,9 @@ Requires:       python2-pyroute2
 Requires:       python2-stevedore
 Requires:       python2-six
 Requires:       python2-oslo-versionedobjects >= 1.31.2
+Requires:       python2-networking-bgpvpn >= 8.0.0
+Requires:       python2-networking-sfc >= 6.0.0
+Requires:       openstack-neutron >= 1:13.0.0
 
 %description -n python2-%{pypi_name}
 %{common_desc}
