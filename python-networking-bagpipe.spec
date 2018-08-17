@@ -59,7 +59,10 @@ Requires:       python2-pyroute2
 Requires:       python2-stevedore
 Requires:       python2-six
 Requires:       python2-oslo-versionedobjects >= 1.31.2
-Requires:       python2-networking-bgpvpn >= 8.0.0
+# NOTE(jpena): bagpipe is a BR for bgpvpn, so this creates a dependency loop.
+#              On top of that, it makes unit tests for bgpvpn fail due to
+#              wrong permissions for /etc/neutron/networking_bgpvpn.conf
+#Requires:       python2-networking-bgpvpn >= 8.0.0
 Requires:       python2-networking-sfc >= 6.0.0
 Requires:       openstack-neutron >= 1:13.0.0
 
