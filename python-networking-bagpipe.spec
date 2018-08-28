@@ -1,4 +1,5 @@
 %global pypi_name networking-bagpipe
+%global rhosp 1
 %global sname networking_bagpipe
 %global servicename bagpipe-bgp
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
@@ -63,7 +64,9 @@ Requires:       python2-oslo-versionedobjects >= 1.31.2
 #              On top of that, it makes unit tests for bgpvpn fail due to
 #              wrong permissions for /etc/neutron/networking_bgpvpn.conf
 #Requires:       python2-networking-bgpvpn >= 8.0.0
+%if 0%{rhosp} == 0
 Requires:       python2-networking-sfc >= 6.0.0
+%endif
 Requires:       openstack-neutron >= 1:13.0.0
 
 %description -n python2-%{pypi_name}
