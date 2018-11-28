@@ -79,7 +79,7 @@ Documentation for networking-bagpipe
 Summary:    Networking-BaGPipe
 Requires:   python-networking-bagpipe = %{version}-%{release}
 Requires:   openstack-neutron-common
-%{?systemd_requires}
+%{?systemd_ordering}
 
 %description -n openstack-%{servicename}
 Bagpipe-BGP service
