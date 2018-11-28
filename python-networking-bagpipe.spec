@@ -90,7 +90,11 @@ Documentation for networking-bagpipe
 Summary:    Networking-BaGPipe
 Requires:   python%{pyver}-networking-bagpipe = %{version}-%{release}
 Requires:   openstack-neutron-common
+%if 0%{?rhel} && 0%{?rhel} < 8
 %{?systemd_requires}
+%else
+%{?systemd_ordering} # does not exist on EL7
+%endif
 
 %description -n openstack-%{servicename}
 Bagpipe-BGP service
