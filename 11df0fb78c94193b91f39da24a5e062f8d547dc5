@@ -22,6 +22,30 @@
       "revId": "11df0fb78c94193b91f39da24a5e062f8d547dc5",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9b2e9f39_edaf68aa",
+        "filename": "python-networking-bagpipe.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 534
+      },
+      "writtenOn": "2019-03-20T14:06:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7093c0c7_6a57d2a4",
+      "range": {
+        "startLine": 46,
+        "startChar": 0,
+        "endLine": 47,
+        "endChar": 61
+      },
+      "revId": "11df0fb78c94193b91f39da24a5e062f8d547dc5",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
