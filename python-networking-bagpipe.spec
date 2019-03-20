@@ -56,7 +56,7 @@ Requires:       python%{pyver}-neutron-lib >= 1.18.0
 Requires:       python%{pyver}-netaddr
 Requires:       python%{pyver}-oslo-db >= 4.27.0
 Requires:       python%{pyver}-oslo-config >= 2:5.2.0
-Requires:       python%{pyver}-oslo-concurrency >= 3.25.0
+Requires:       python%{pyver}-oslo-concurrency >= 3.26.0
 Requires:       python%{pyver}-oslo-i18n >= 3.15.3
 Requires:       python%{pyver}-oslo-log >= 3.36.0
 Requires:       python%{pyver}-oslo-messaging >= 5.29.0
@@ -65,7 +65,7 @@ Requires:       python%{pyver}-oslo-service >= 1.24.0
 Requires:       python%{pyver}-oslo-rootwrap >= 5.8.0
 Requires:       python%{pyver}-pecan
 Requires:       python%{pyver}-setuptools
-Requires:       python%{pyver}-exabgp >= 4.0.1
+Requires:       python%{pyver}-exabgp >= 4.0.4
 Requires:       python%{pyver}-pyroute2
 Requires:       python%{pyver}-stevedore
 Requires:       python%{pyver}-six
@@ -74,7 +74,7 @@ Requires:       python%{pyver}-oslo-versionedobjects >= 1.31.2
 #              On top of that, it makes unit tests for bgpvpn fail due to
 #              wrong permissions for /etc/neutron/networking_bgpvpn.conf
 #Requires:       python%{pyver}-networking-bgpvpn >= 8.0.0
-Requires:       python%{pyver}-networking-sfc >= 6.0.0
+Requires:       python%{pyver}-networking-sfc >= 8.0.0
 Requires:       openstack-neutron >= 1:13.0.0
 
 %description -n python%{pyver}-%{pypi_name}
