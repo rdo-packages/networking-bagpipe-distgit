@@ -14,6 +14,7 @@
 %global servicename bagpipe-bgp
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
+%global with_doc 1
 %global common_desc \
 BaGPipe BGP is a lightweight implementation of BGP VPNs (IP VPNs and E-VPNs), \
 targeting deployments on servers hosting VMs, in particular for Openstack/KVM \
@@ -80,11 +81,22 @@ Requires:       openstack-neutron >= 1:13.0.0
 %description -n python%{pyver}-%{pypi_name}
 %{common_desc}
 
+%if 0%{?with_doc}
 %package doc
 Summary:        networking-bagpipe documentation
 
+BuildRequires: python%{pyver}-openstackdocstheme
+BuildRequires: python%{pyver}-oslo-config
+BuildRequires: python%{pyver}-sphinx
+BuildRequires: python%{pyver}-sphinxcontrib-actdiag
+BuildRequires: python%{pyver}-sphinxcontrib-blockdiag
+BuildRequires: python%{pyver}-sphinxcontrib-seqdiag
+
 %description doc
+%{common_desc}
+
 Documentation for networking-bagpipe
+%endif
 
 %package -n openstack-%{servicename}
 Summary:    Networking-BaGPipe
@@ -106,7 +118,13 @@ rm -rf %{pypi_name}.egg-info
 
 %build
 %{pyver_build}
-rm -rf html/.{doctrees,buildinfo}
+
+%if 0%{?with_doc}
+# Build html documentation
+sphinx-build-%{pyver} -b html doc/source doc/build/html
+# Remove the sphinx-build leftovers
+rm -rf doc/build/html/.{doctrees,buildinfo}
+%endif
 
 %install
 %{pyver_install}
@@ -142,8 +160,11 @@ install -p -D -m 644 %{SOURCE1} %{buildroot}%{_unitdir}/%{servicename}.service
 %{_bindir}/bagpipe-looking-glass
 %{_bindir}/bagpipe-rest-attach
 
+%if 0%{?with_doc}
 %files doc
+%doc doc/build/html
 %license LICENSE
+%endif
 
 %files -n openstack-%{servicename}
 %license LICENSE
