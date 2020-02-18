@@ -20,7 +20,7 @@ targeting deployments on servers hosting VMs, in particular for Openstack/KVM \
 platforms.
 
 Name:           python-%{pypi_name}
-Version:        10.0.0
+Version:        10.0.1
 Release:        1%{?dist}
 Summary:        Mechanism driver for Neutron ML2 plugin using BGP E-VPNs/IP VPNs as a backend
 
@@ -157,6 +157,9 @@ install -p -D -m 644 %{SOURCE1} %{buildroot}%{_unitdir}/%{servicename}.service
 %config(noreplace) %attr(0640, neutron, neutron) %{_sysconfdir}/neutron/%{servicename}/rootwrap.d/*.filters
 
 %changelog
+* Tue Feb 18 2020 RDO <dev@lists.rdoproject.org> 10.0.1-1
+- Update to 10.0.1
+
 * Wed Apr 10 2019 RDO <dev@lists.rdoproject.org> 10.0.0-1
 - Update to 10.0.0
 
