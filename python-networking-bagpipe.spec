@@ -1,4 +1,3 @@
-%global milestone .0rc1
 %global pypi_name networking-bagpipe
 %global sname networking_bagpipe
 %global servicename bagpipe-bgp
@@ -12,14 +11,12 @@ platforms.
 
 Name:           python-%{pypi_name}
 Version:        12.0.0
-Release:        0.1%{?milestone}%{?dist}
+Release:        1%{?dist}
 Summary:        Mechanism driver for Neutron ML2 plugin using BGP E-VPNs/IP VPNs as a backend
 
 License:        ASL 2.0
 URL:            https://github.com/openstack/networking-bagpipe
 Source0:        http://tarballs.openstack.org/%{pypi_name}/%{pypi_name}-%{upstream_version}.tar.gz
-#
-# patches_base=12.0.0.0rc1
 #
 
 Source1:        %{servicename}.service
@@ -169,6 +166,9 @@ install -p -D -m 644 %{SOURCE1} %{buildroot}%{_unitdir}/%{servicename}.service
 %config(noreplace) %attr(0640, neutron, neutron) %{_sysconfdir}/neutron/%{servicename}/rootwrap.d/*.filters
 
 %changelog
+* Wed May 13 2020 RDO <dev@lists.rdoproject.org> 12.0.0-1
+- Update to 12.0.0
+
 * Thu May 07 2020 RDO <dev@lists.rdoproject.org> 12.0.0-0.1.0rc1
 - Update to 12.0.0.0rc1
 
