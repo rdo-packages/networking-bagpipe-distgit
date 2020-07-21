@@ -109,6 +109,8 @@ rm -rf %{pypi_name}.egg-info
 
 %if 0%{?with_doc}
 # Build html documentation
+export PBR_VERSION=%{version}
+export PYTHONPATH=.
 sphinx-build-3 -b html doc/source doc/build/html
 # Remove the sphinx-build leftovers
 rm -rf doc/build/html/.{doctrees,buildinfo}
