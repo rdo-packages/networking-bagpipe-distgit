@@ -3,7 +3,9 @@
 %global servicename bagpipe-bgp
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
-%global with_doc 1
+# NOTE(jpena): to build docs, we would need to add networking_bagpipe as a BR,
+# creating the same dependency loop we have in runtime requirements
+%global with_doc 0
 %global common_desc \
 BaGPipe BGP is a lightweight implementation of BGP VPNs (IP VPNs and E-VPNs), \
 targeting deployments on servers hosting VMs, in particular for Openstack/KVM \
@@ -41,6 +43,7 @@ Summary:        Mechanism driver for Neutron ML2 plugin using BGP E-VPNs/IP VPNs
 %{?python_provide:%python_provide python3-%{pypi_name}}
 
 Requires:       python3-babel >= 2.3.4
+Requires:       python3-httplib2
 Requires:       python3-neutron-lib >= 2.2.0
 Requires:       python3-netaddr
 Requires:       python3-oslo-db >= 4.37.0
@@ -73,8 +76,15 @@ Requires:       openstack-neutron >= 1:16.0.0
 %package doc
 Summary:        networking-bagpipe documentation
 
+BuildRequires: openstack-neutron
+BuildRequires: python3-exabgp
+BuildRequires: python3-httplib2
+BuildRequires: python3-networking-bgpvpn
 BuildRequires: python3-openstackdocstheme
+BuildRequires: python3-oslo-concurrency
 BuildRequires: python3-oslo-config
+BuildRequires: python3-oslo-log
+BuildRequires: python3-oslo-service
 BuildRequires: python3-sphinx
 BuildRequires: python3-sphinxcontrib-actdiag
 BuildRequires: python3-sphinxcontrib-blockdiag
@@ -109,6 +119,8 @@ rm -rf %{pypi_name}.egg-info
 
 %if 0%{?with_doc}
 # Build html documentation
+export PBR_VERSION=%{version}
+export PYTHONPATH=.
 sphinx-build-3 -b html doc/source doc/build/html
 # Remove the sphinx-build leftovers
 rm -rf doc/build/html/.{doctrees,buildinfo}
