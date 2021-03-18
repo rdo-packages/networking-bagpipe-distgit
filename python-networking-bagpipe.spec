@@ -57,7 +57,7 @@ Summary:        Mechanism driver for Neutron ML2 plugin using BGP E-VPNs/IP VPNs
 
 Requires:       python3-babel >= 2.3.4
 Requires:       python3-neutron-lib >= 2.2.0
-Requires:       python3-netaddr
+Requires:       python3-netaddr >= 0.7.18
 Requires:       python3-oslo-db >= 4.37.0
 Requires:       python3-oslo-config >= 2:5.2.0
 Requires:       python3-oslo-concurrency >= 3.26.0
@@ -67,17 +67,18 @@ Requires:       python3-oslo-messaging >= 5.29.0
 Requires:       python3-oslo-serialization >= 2.18.0
 Requires:       python3-oslo-service >= 1.24.0
 Requires:       python3-oslo-rootwrap >= 5.8.0
-Requires:       python3-pecan
+Requires:       python3-pecan >= 1.3.2
 Requires:       python3-exabgp >= 4.0.4
-Requires:       python3-pyroute2
-Requires:       python3-stevedore
+Requires:       python3-pyroute2 >= 0.5.7
+Requires:       python3-stevedore >= 1.20.0
 Requires:       python3-oslo-versionedobjects >= 1.35.1
+Requires:       python3-oslo-privsep >= 2.3.0
 # NOTE(jpena): bagpipe is a BR for bgpvpn, so this creates a dependency loop.
 #              On top of that, it makes unit tests for bgpvpn fail due to
 #              wrong permissions for /etc/neutron/networking_bgpvpn.conf
 #Requires:       python3-networking-bgpvpn >= 8.0.0
 Requires:       python3-networking-sfc >= 10.0.0
-Requires:       openstack-neutron >= 1:16.0.0
+Requires:       openstack-neutron-common >= 1:16.0.0
 
 %description -n python3-%{pypi_name}
 %{common_desc}
@@ -108,7 +109,7 @@ Documentation for networking-bagpipe
 %package -n openstack-%{servicename}
 Summary:    Networking-BaGPipe
 Requires:   python3-networking-bagpipe = %{version}-%{release}
-Requires:   openstack-neutron-common
+Requires:   openstack-neutron-common >= 16.0.0
 %if 0%{?rhel} && 0%{?rhel} < 8
 %{?systemd_requires}
 %else
