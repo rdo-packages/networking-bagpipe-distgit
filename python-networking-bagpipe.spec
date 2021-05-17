@@ -128,6 +128,8 @@ Bagpipe-BGP service
 %autosetup -n %{pypi_name}-%{upstream_version}
 # Remove bundled egg-info
 rm -rf %{pypi_name}.egg-info
+# Let RPM handle the dependencies
+rm -f {,test-}requirements.txt
 
 %build
 %{py3_build}
