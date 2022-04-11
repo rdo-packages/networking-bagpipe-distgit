@@ -1,5 +1,5 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x2426b928085a020d8a90d0d879ab7008d0896c8a
+%global sources_gpg_sign 0x01527a34f0d0080f8a5db8d6eb6c5df21b4b6363
 %global pypi_name networking-bagpipe
 %global sname networking_bagpipe
 %global servicename bagpipe-bgp
@@ -14,8 +14,8 @@ targeting deployments on servers hosting VMs, in particular for Openstack/KVM \
 platforms.
 
 Name:           python-%{pypi_name}
-Version:        XXX
-Release:        XXX
+Version:        16.0.0
+Release:        1%{?dist}
 Summary:        Mechanism driver for Neutron ML2 plugin using BGP E-VPNs/IP VPNs as a backend
 
 License:        ASL 2.0
@@ -192,3 +192,6 @@ install -p -D -m 644 %{SOURCE1} %{buildroot}%{_unitdir}/%{servicename}.service
 %config(noreplace) %attr(0640, neutron, neutron) %{_sysconfdir}/neutron/%{servicename}/rootwrap.d/*.filters
 
 %changelog
+* Mon Apr 11 2022 RDO <dev@lists.rdoproject.org> 16.0.0-1
+- Update to 16.0.0
+
