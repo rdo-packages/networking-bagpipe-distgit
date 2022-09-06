@@ -56,7 +56,7 @@ Summary:        Mechanism driver for Neutron ML2 plugin using BGP E-VPNs/IP VPNs
 %{?python_provide:%python_provide python3-%{pypi_name}}
 
 Requires:       python3-babel >= 2.3.4
-Requires:       python3-neutron-lib >= 2.2.0
+Requires:       python3-neutron-lib >= 2.19.0
 Requires:       python3-netaddr >= 0.7.18
 Requires:       python3-oslo-db >= 4.37.0
 Requires:       python3-oslo-config >= 2:5.2.0
