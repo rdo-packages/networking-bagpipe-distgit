@@ -16,6 +16,41 @@
       "message": "missing python3-networking-sfc",
       "revId": "febd054de3b09c370fdaa4b23ca5823e7d1fc5c3",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ba25ddd6_81545bdf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2023-03-20T15:29:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "12f01aae_f44ce14f",
+      "revId": "febd054de3b09c370fdaa4b23ca5823e7d1fc5c3",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "95170f50_f47ad750",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2023-03-20T15:29:47Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "febd054de3b09c370fdaa4b23ca5823e7d1fc5c3",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
