@@ -1,4 +1,3 @@
-%global milestone .0rc1
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
 %global sources_gpg_sign 0xa7475c5f2122fec3f90343223fe3bf5aad1080e4
 %global pypi_name networking-bagpipe
@@ -16,14 +15,12 @@ platforms.
 
 Name:           python-%{pypi_name}
 Version:        18.0.0
-Release:        0.1%{?milestone}%{?dist}
+Release:        1%{?dist}
 Summary:        Mechanism driver for Neutron ML2 plugin using BGP E-VPNs/IP VPNs as a backend
 
 License:        ASL 2.0
 URL:            https://github.com/openstack/networking-bagpipe
 Source0:        http://tarballs.openstack.org/%{pypi_name}/%{pypi_name}-%{upstream_version}.tar.gz
-#
-# patches_base=18.0.0.0rc1
 #
 
 Source1:        %{servicename}.service
@@ -197,6 +194,9 @@ install -p -D -m 644 %{SOURCE1} %{buildroot}%{_unitdir}/%{servicename}.service
 %config(noreplace) %attr(0640, neutron, neutron) %{_sysconfdir}/neutron/%{servicename}/rootwrap.d/*.filters
 
 %changelog
+* Fri Mar 31 2023 RDO <dev@lists.rdoproject.org> 18.0.0-1
+- Update to 18.0.0
+
 * Mon Mar 20 2023 RDO <dev@lists.rdoproject.org> 18.0.0-0.1.0rc1
 - Update to 18.0.0.0rc1
 
