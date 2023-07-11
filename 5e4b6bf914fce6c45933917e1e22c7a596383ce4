@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "65da05d7_e86b554d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-07-11T10:16:52Z",
+      "side": 1,
+      "message": "This is also pulling horizon as runtime requirement as it\u0027s in requirements.txt even when it\u0027s not really a requirement so i\u0027d remove it using excluded_reqs too",
+      "revId": "5e4b6bf914fce6c45933917e1e22c7a596383ce4",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
