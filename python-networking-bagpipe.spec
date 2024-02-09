@@ -195,3 +195,4 @@ install -p -D -m 644 %{SOURCE1} %{buildroot}%{_unitdir}/%{servicename}.service
 * Mon Apr 11 2022 RDO <dev@lists.rdoproject.org> 16.0.0-1
 - Update to 16.0.0
 
+
