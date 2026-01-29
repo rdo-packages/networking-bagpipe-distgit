@@ -185,3 +185,4 @@ install -p -D -m 644 %{SOURCE1} %{buildroot}%{_unitdir}/%{servicename}.service
 * Thu Mar 14 2024 RDO <dev@lists.rdoproject.org> 20.0.0-0.1.0rc1
 - Update to 20.0.0.0rc1
 
+# REMOVEME: error caused by commit https://opendev.org/openstack/networking-bagpipe/commit/39167cd7f8cee209273d8077057b496d4796ee6e
