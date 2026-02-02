@@ -179,3 +179,4 @@ install -p -D -m 644 %{SOURCE1} %{buildroot}%{_unitdir}/%{servicename}.service
 %config(noreplace) %attr(0640, neutron, neutron) %{_sysconfdir}/neutron/%{servicename}/rootwrap.d/*.filters
 
 %changelog
+# REMOVEME: error caused by commit https://opendev.org/openstack/networking-bagpipe/commit/54ddcb0721993aa9e5c13e0eeb097d6b9b8bd4b1
